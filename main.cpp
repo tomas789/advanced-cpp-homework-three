@@ -11,11 +11,18 @@
 
 #include "translator.h"
 
+/**
+ * Hlavni program
+ *
+ * Vstupni parametry jsou natolik trivialni, ze jsem se rozhodl osetrit vsechny
+ * pripady misto pouzivani nejakeho parseru ci co. Nevypada to nic moc, ale
+ * funkci to plni vice nez dobre.
+ */
 int
 main(int argc, char * argv[])
 {
     std::vector<std::string> v(argv, argv + argc);
-    translator & t = translator::get_instance();
+    translator t;
 
     /* All cases for command line arguments */
 	if (v.size() == 1) {
